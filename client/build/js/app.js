@@ -1342,6 +1342,8 @@ var app = angular.module('bundlin', [
     $scope.user = false;
     $scope.beta_invites_remaining = 'a couple';
     $scope.itemsLimit = 5;
+    $scope.video = angular.element(document.querySelector('#introvideo'));
+    $scope.videoSrcLink = "http://player.vimeo.com/video/125583287?color=fff&portrait=0&title=0&byline=0&badge=0&autoplay=0&api=1&player_id=introvideo";
 
     $scope.showMoreLazyload = function(addedAmount) {
 
@@ -1375,9 +1377,10 @@ var app = angular.module('bundlin', [
     $scope.playvideo = false;
     $scope.video_played = false;
     $scope.playVideo = function() {
+        $scope.video[0].src = $scope.videoSrcLink;
         $scope.video_played = true;
         $scope.playvideo = true;
-        var toElement = angular.element(document.querySelector('#introvideo'));
+        var toElement = $scope.video;
         $document.scrollTo(toElement, 150, 1000);
     };
 

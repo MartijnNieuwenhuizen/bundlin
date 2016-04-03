@@ -152,7 +152,6 @@ Load less Favicons
 
 ![less-bundless](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/less-bundless.png"less-bundless")
 
-
 **Code**
 ```
 // intro.html
@@ -177,6 +176,35 @@ $scope.showMoreLazyload = function(addedAmount) {
 }
 ```
 
+### The video
+The video is loaded on the start of the pageload. This creates 9 unnecessary requests at that point. This video is not visible until the user clicks on the button to look at the video, so this video can be loaded at that point, not at the load of the whole page
+
+* Requests: 73
+* Size: 2.3MB
+* Finish: 13.28s
+* DOMContentLoaded: 5.65s
+* Load: 5.84s
+
+![show-video-after-click](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/show-video-after-click.png"show-video-after-click")
+
+**Code** 
+```
+// Intro.html
+// Removed the src
+
+<iframe class="bln-video" webkitallowfullscreen mozallowfullscreen allowfullscreen video-status="playvideo" id="introvideo"></iframe>
+
+// introController.js
+// Set src on click
+
+$scope.video = angular.element(document.querySelector('#introvideo'));
+$scope.videoSrcLink = "http://player.vimeo.com/video/125583287?color=fff&portrait=0&title=0&byline=0&badge=0&autoplay=0&api=1&player_id=introvideo";
+
+$scope.playVideo = function() {
+    $scope.video[0].src = $scope.videoSrcLink;
+};
+
+```
 
 
 ## Enhancements
