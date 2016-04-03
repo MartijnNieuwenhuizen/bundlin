@@ -1,0 +1,12 @@
+CHANGELOG
+Vagrantfile
+docs/
+logs/
+npm-debug.log
+share
+sublime-project.json
+twitter-tool/
+wercker.yml
+
+client/node_modules/
+client/src/vendor/
