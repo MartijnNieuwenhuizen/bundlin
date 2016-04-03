@@ -10,3 +10,4 @@ wercker.yml
 
 client/node_modules/
 client/src/vendor/
+client/build/
