@@ -206,9 +206,47 @@ $scope.playVideo = function() {
 
 ```
 
+### Image Row
+The animated imagesroll contains 20 images who arn't combined into a sprite.
+After combining them into a sprite, this is the progress.
+
+* Requests: 60
+* Size: 1.9MB
+* Finish: 11.16s
+* DOMContentLoaded: 5.97s
+* Load: 5.62s
+
+
+### Team Foto Sprite
+The team consists of 9 people, each with a different photo. After combining the nine avatar pics into a sprite and set them as a background, this are the numbers.
+
+* Requests: 52
+* Size: 1.8MB
+* Finish: 10.50s
+* DOMContentLoaded: 5.94s
+* Load: 6.22s
+
+### Critital CSS
+Used the grunt plugin grunt-critical-css
+
+* Requests: 52
+* Size: 1.8MB
+* Finish: 10.42s
+* DOMContentLoaded: 5.91s
+* Load: 6.13s
+
+### Removed animations
+If the page loads, there are a view delay's and animations on the elements above the fold. By removing a part of this animations, the site looks quicker (and loads quicker!).
+
+* Requests: 58
+* Size: 1.5MB
+* Finish: 8.99s
+* DOMContentLoaded: 6.07s
+* Load: 6.33s
 
 ## Enhancements
 ### :focus
+
 
 
 ## Cleaner HTML
@@ -250,6 +288,16 @@ New code
     </p>
 </section>
 ```
+
+# Further Advice
+* Make the HTML More Semantic
+* Use a method like BEM to create more consistentsy in your namegiving
+* Update Anguler to the latest version this allows you to only import the modules you want to use from Anguler
+* Reduce the amount of CSS by making it more generic
+
+
+# Conclusion
+By reducing the amount of content that's immediately loaded if the page is loaded, the loading time is reduced significantly. Tricks, like using a sprite or creating a 'Load More' button instead of loading all 20 items, have helped a lot in this case. 
 
 
 

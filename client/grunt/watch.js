@@ -4,7 +4,7 @@ module.exports = {
     // targets
     styles_project: {
         files: [ 'src/styles/**/*.less' ],
-        tasks: [ 'less', 'copy:styles_project', 'autoprefixer:styles_project', 'copy:styles_project', 'clean:tmp' ]
+        tasks: [ 'less', 'copy:styles_project', 'cssmin:styles_project', 'autoprefixer:styles_project', 'copy:styles_project', 'uncss:uncss','clean:tmp' ]
     },
     styles_vendor: {
         files: [ 'src/vendor/**/*.css', 'src/vendor.json' ],

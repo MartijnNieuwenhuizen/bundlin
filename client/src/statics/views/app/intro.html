@@ -1,19 +1,15 @@
 <article>
 
-  <state-animation class="bln-stateanimation fade">
 
     <!-- Home header -->
     <header class="bln-homeheader">
-      <state-animation class="bln-stateanimation fade homeheader" enter-delay="500">
         <!-- Title, subtitle and buttons -->
         <div class="bln-section bln-section-intro bln-section-intro-header">
           <div class="bln-maxwidth">
-            <state-animation class="bln-stateanimation slow fade" enter-delay="1500">
               <p class="bln-credits bln-credits-small">
                   <img src="/images/intro-handcrafted.png" alt="Handcrafted by" class="handcraftedby">
                   <a href="http://lifely.nl?ref=bundlin" target="_blank" class="logo"><img src="/images/logo_lifely.png" alt="Lifely"></a>
               </p>
-            </state-animation>
             <h1 class="title">The beauty of the web, bundled.</h1>
             <p class="subtitle">Create, discover and share Bundles of links about your favorite subjects.</p>
             <div class="buttons">
@@ -32,12 +28,10 @@
             </div>
           </div>
         </div>
-      </state-animation>
 
-      <state-animation class="bln-stateanimation fade" enter-delay="500">
 
         <!-- Gallery -->
-        <div class="bln-movinggallery" fancy-intro fancy-intro-offset="0" fancy-intro-delay="2000" fancy-intro-effect="move-up" fancy-intro-effect-distance="long" fancy-intro-children="ul > li" fancy-intro-children-delay="150">
+        <div class="bln-movinggallery">
           <ul>
             <li><div class="layer-2" ng-style="{'background-image': 'url(' + '/images/teamphotos/teamphoto-01.jpg' + ')', 'left': '116px', 'top': '-77px'}"></div></li>
             <li><div class="layer-1 small" ng-style="{'background-image': 'url(' + '/images/teamphotos/teamphoto-02.jpg' + ')', 'left': '46px', 'top': '95px'}"></div></li>
@@ -47,7 +41,6 @@
           </ul>
         </div>
 
-      </state-animation>
 
       <!-- Video -->
       <section class="bln-section bln-section-green bln-section-intro bln-section-video bln-section-video-intro" ng-class="{'active': playvideo}">
@@ -61,9 +54,7 @@
       </section>
 
     </header>
-  </state-animation>
 
-  <state-animation class="bln-stateanimation fade" enter-delay="750">
 
     <!-- Featured bundles -->
     <section class="bln-section bln-section-feed" set-window id="first-content">
@@ -78,16 +69,12 @@
         <a class="bln-scrollarrow bln-scrollarrow-left" ng-click="scrollLeft()" ng-class="{'active': overflown.horizontal && scrollStatus && !scrollStatus.horizontal.scroll.left}"></a>
         <ul scrolling-element class="featured-bundles-list">
           <li ng-repeat="entry in featured" ng-init="bundle = entry" class="featured-bundles-item">
-            <state-animation class="bln-stateanimation fade" enter-delay="{{ 750 + 200 * $index}}" style="height: 100%;">
               <partial name="bundletile" scope="{'bundle': bundle, 'type': 'home'}"></partial>
-            </state-animation>
           </li>
           <li class="load-more-button-container">
-            <state-animation class="bln-stateanimation fade" enter-delay="{{ 750 + 200 * $index}}" style="height: 100%;">
                 <div class="bln-bundletile bln-bundletile-original {{type ? 'bln-bundletile-' + type : ''}}" expandable ng-init="!bundle.picture.original && setFocuspointForPlaceholder(bundle)">
                   <a class="load-more-button" href="" ng-click='showMoreLazyload(5)'>Load More</a>
                 </div>
-            </state-animation>
           </li>
         </ul>
       </div>
@@ -160,16 +147,7 @@
     <section class="bln-section">
       <div class="bln-photoroll bln-photoroll-green">
         <ul photo-roll photo-roll-speed="30">
-          <li><img src="/images/photoroll/intro-photoroll-01.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-02.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-03.jpg" alt=""></li>
-          <!-- <li><img src="/images/photoroll/intro-photoroll-04.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-05.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-06.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-07.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-08.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-09.jpg" alt=""></li>
-          <li><img src="/images/photoroll/intro-photoroll-10.jpg" alt=""></li> -->
+          <li><img src="/images/photoroll/roll.jpg" alt=""></li>
         </ul>
       </div>
     </section>
@@ -183,63 +161,63 @@
         <ul class="bln-teamlist" fancy-intro fancy-intro-offset="200" fancy-intro-delay="0" fancy-intro-effect="move-right" fancy-intro-effect-distance="long" fancy-intro-children="li > a" fancy-intro-children-delay="100">
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'pimverlaan'})">
-              <img src="/images/avatars/pim.jpg" alt="Foto Pim Verlaan">
+              <div class="avatar" id="pim"></div>
               <span class="bln-name bln-name-profilecard">Pim Verlaan</span>
               <span class="bln-role bln-role-profilecard">Founder & design</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'nrdebruijn'})">
-              <img src="/images/avatars/nick.jpg" alt="Foto Nick de Bruijn">
+              <div class="avatar" id="nick"></div>
               <span class="bln-name bln-name-profilecard">Nick de Bruijn</span>
               <span class="bln-role bln-role-profilecard">Founder</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'peterpeerdeman'})">
-              <img src="/images/avatars/peter.jpg" alt="Foto Peter Peerdeman">
+              <div class="avatar" id="peter"></div>
               <span class="bln-name bln-name-profilecard">Peter Peerdeman</span>
               <span class="bln-role bln-role-profilecard">Lead Tech</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'bryantebeek'})">
-              <img src="/images/avatars/bryan.jpg" alt="Foto Bryan te Beek">
+              <div class="avatar" id="bryan"></div>
               <span class="bln-name bln-name-profilecard">Bryan te Beek</span>
               <span class="bln-role bln-role-profilecard">Coding</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'jessedvrs'})">
-              <img src="/images/avatars/jesse.jpg" alt="Foto Jesse de Vries">
+              <div class="avatar" id="jesse"></div>
               <span class="bln-name bln-name-profilecard">Jesse de Vries</span>
               <span class="bln-role bln-role-profilecard">Coding</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'nick_koster'})">
-              <img src="/images/avatars/nick.k.jpg" alt="Foto Nick Koster">
+              <div class="avatar" id="nickk"></div>
               <span class="bln-name bln-name-profilecard">Nick Koster</span>
               <span class="bln-role bln-role-profilecard">Coding</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'takeluutzen'})">
-              <img src="/images/avatars/take.jpg" alt="Foto Take Lijzenga">
+              <div class="avatar" id="take"></div>
               <span class="bln-name bln-name-profilecard">Take Lijzenga</span>
               <span class="bln-role bln-role-profilecard">Design</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'llaleon'})">
-              <img src="/images/avatars/leon.jpg" alt="Foto Léon Smit">
+              <div class="avatar" id="leon"></div>
               <span class="bln-name bln-name-profilecard">Léon Smit</span>
               <span class="bln-role bln-role-profilecard">Coding</span>
             </a>
           </li>
           <li class="bln-profilecard">
             <a ui-sref="app.view_profile.bundles({'profileScreenName':'jannaboekema'})">
-                <img src="/images/avatars/janna.jpg" alt="Foto Janna Boekema">
+                <div class="avatar" id="janna"></div>
                 <span class="bln-name bln-name-profilecard">Janna Boekema</span>
                 <span class="bln-role bln-role-profilecard">Content strategy</span>
             </a>
@@ -247,7 +225,7 @@
         </ul>
 
         <!-- Static gallery -->
-        <div class="bln-staticgallery shrink" ng-class="{'shrink': !fullGallery}" fancy-intro fancy-intro-offset="150" fancy-intro-delay="400" fancy-intro-children="img, .stretch figure, .loadmorecontainer" fancy-intro-children-delay="200" fancy-intro-effect="move-up" fancy-intro-effect-distance="long">
+        <div class="bln-staticgallery shrink" ng-class="{'shrink': !fullGallery}">
           <ul>
             <li>
               <div class="wrap half left"><img src="../images/homepictures/team-01.jpg"></div>
@@ -264,7 +242,7 @@
               </div>
             </li>
           </ul>
-          <div class="loadmorecontainer" ng-class="{ 'inactive': fullGallery }">
+          <div class="loadmorecontainer fancy-intro fancy-intro-effect fancy-intro-effect-move-up fancy-intro-effect-distance-long fancy-intro-init" ng-class="{ 'inactive': fullGallery }">
             <div class="fade"></div>
             <button class="loadmore" ng-click="fullGallery = true">More</button>
           </div>
@@ -286,6 +264,5 @@
       </div>
     </footer>
 
-  </state-animation>
 
 </article>
