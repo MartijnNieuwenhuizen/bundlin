@@ -119,7 +119,7 @@ At the start of the project, this are the statistics:
 * DOMContentLoaded: 5.65s
 * Load: 5.86s
 
-![start of the project](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/start-of-the-project.png"start of the project")
+![start of the project](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/start-of-the-project.png "start of the project")
 
 ### PhotoRoll
 Load less photo's in the photoroll
@@ -130,7 +130,7 @@ Load less photo's in the photoroll
 * DOMContentLoaded: 5.85s
 * Load: 5.13s
 
-![load less photos in photo frame](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/load-less-photos-in-photo-frame.png"load less photos in photo frame")
+![load less photos in photo frame](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/load-less-photos-in-photo-frame.png "load less photos in photo frame")
 
 ### Less Favicons
 Load less Favicons
@@ -141,7 +141,7 @@ Load less Favicons
 * DOMContentLoaded: 5.69s
 * Load: 5.90s
 
-![load less favicons](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/load-less-favicons.png"load-less-favicons")
+![load less favicons](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/load-less-favicons.png "load-less-favicons")
 
 ### Reduce amount of bundles
 * Requests: 82
@@ -150,7 +150,7 @@ Load less Favicons
 * DOMContentLoaded: 5.68s
 * Load: 5.91s
 
-![less-bundless](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/less-bundless.png"less-bundless")
+![less-bundless](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/less-bundless.png "less-bundless")
 
 **Code**
 ```
@@ -185,7 +185,7 @@ The video is loaded on the start of the pageload. This creates 9 unnecessary req
 * DOMContentLoaded: 5.65s
 * Load: 5.84s
 
-![show-video-after-click](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/show-video-after-click.png"show-video-after-click")
+![show-video-after-click](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/show-video-after-click.png "show-video-after-click")
 
 **Code** 
 ```
@@ -244,10 +244,7 @@ If the page loads, there are a view delay's and animations on the elements above
 * DOMContentLoaded: 6.07s
 * Load: 6.33s
 
-## Enhancements
-### :focus
-
-
+![final-screenshot](https://github.com/MartijnNieuwenhuizen/bundlin/blob/master/screenshots/show-video-after-click.png "final-screenshot")
 
 ## Cleaner HTML
 ### Bundle Tile
